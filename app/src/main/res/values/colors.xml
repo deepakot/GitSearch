@@ -9,4 +9,6 @@
     <color name="filters_buttons">#ff4081</color>
     <color name="filters_buttons_selected">#c2185b</color>
     <color name="dark_gray">#bdbdbd</color>
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
 </resources>

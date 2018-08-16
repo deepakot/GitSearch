@@ -29,8 +29,6 @@ import mapprr.deepak.gitsearch.presenter.RepoDetailPresenter;
 public class ContributorActivity extends AppCompatActivity implements GitSearchContract.ContributorView {
     private ImageView ivRepoCover;
     private RecyclerView rvRepoList;
-
-    private GitSearchClientImpl client;
     private ArrayList<Repo> aRepos;
     private RepoListAdapter repoListAdapter;
     ProgressDialog pDialog;
@@ -60,7 +58,6 @@ public class ContributorActivity extends AppCompatActivity implements GitSearchC
                 .load(Uri.parse(imgUrl))
                 .placeholder(R.drawable.ic_nocover)
                 .into(ivRepoCover);
-        // Extract repo object from intent extras
         GitSearchContract.GitSearchModel gitSearchModel = new GitSearchClientImpl();
         contributorPresenter = new ContributorPresenter(gitSearchModel);
         contributorPresenter.bind(this);

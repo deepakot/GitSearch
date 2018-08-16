@@ -32,6 +32,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="18sp"
+            android:textColor="@color/material_light_primary_text"
             android:text="Project Link: "
             android:layout_marginTop="8dp" />
         <TextView
@@ -53,6 +54,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="18sp"
+            android:textColor="@color/material_light_primary_text"
             android:text="Description: "
             android:layout_marginTop="8dp" />
         <TextView
@@ -72,6 +74,7 @@
             android:layout_height="wrap_content"
             android:textSize="18sp"
             android:text="Contributors: "
+            android:textColor="@color/material_light_primary_text"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"/>
         <android.support.v7.widget.RecyclerView
