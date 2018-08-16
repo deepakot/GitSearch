@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:app="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:padding="@dimen/activity_margin"
+    app:layout_width="match_parent"
+    app:layout_height="wrap_content"
+    tools:ignore="NamespaceTypo">
+    <android.support.v7.widget.CardView
+        app:id="@+id/card_view"
+        app:clickable="true"
+        app:layout_width="match_parent"
+        app:layout_height="wrap_content"
+        app:focusable="true">
+        <LinearLayout
+            app:orientation="horizontal"
+            app:layout_width="match_parent"
+            app:layout_height="wrap_content">
+            <ImageView
+                app:id="@+id/imgAvatar"
+                app:layout_width="80dp"
+                app:layout_height="80dp"
+                app:layout_margin="5dp"
+                app:src="@drawable/git_avatar"
+                app:scaleType="fitCenter"
+                app:minWidth="100dp" />
+            <RelativeLayout
+                app:layout_width="match_parent"
+                app:layout_height="wrap_content"
+                app:layout_margin="@dimen/activity_margin">
+                <TextView
+                    app:textStyle="bold"
+                    app:id="@+id/name"
+                    app:layout_width="match_parent"
+                    app:layout_height="wrap_content" />
+                <TextView app:id="@+id/fullName"
+                    app:layout_width="match_parent"
+                    app:layout_height="wrap_content"
+                    app:layout_marginTop="@dimen/activity_margin"
+                    app:layout_below="@+id/name" />
+                <View
+                    app:id="@+id/divider"
+                    app:background="@color/colorGrey"
+                    app:layout_width="match_parent"
+                    app:layout_height="1dp"
+                    app:layout_marginTop="5dp"
+                    app:layout_below="@+id/fullName" />
+                <LinearLayout
+                    app:layout_width="match_parent"
+                    app:layout_height="wrap_content"
+                    app:layout_marginTop="5dp"
+                    app:weightSum="3.0"
+                    app:layout_below="@+id/divider">
+                    <TextView
+                        app:gravity="center"
+                        app:id="@+id/watchCount"
+                        app:layout_width="wrap_content"
+                        app:layout_height="wrap_content"
+                        app:drawableLeft="@drawable/ic_watcher"
+                        app:drawablePadding="5dp"
+                        app:layout_weight="1.0" />
+                    <TextView
+                        app:gravity="center"
+                        app:layout_gravity="center"
+                        app:id="@+id/forkCount"
+                        app:layout_width="wrap_content"
+                        app:layout_height="wrap_content"
+                        app:drawableLeft="@drawable/ic_fork"
+                        app:drawablePadding="5dp"
+                        app:layout_weight="1.0" />
+                    <TextView
+                        app:gravity="center"
+                        app:id="@+id/starCount"
+                        app:layout_width="wrap_content"
+                        app:layout_height="wrap_content"
+                        app:drawableLeft="@drawable/ic_star_border"
+                        app:drawablePadding="5dp"
+                        app:layout_weight="1.0" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

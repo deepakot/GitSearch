@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:app="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:background="@color/colorActivity"
+    app:layout_width="match_parent"
+    app:layout_height="match_parent"
+    tools:ignore="NamespaceTypo">
+<android.support.v7.widget.RecyclerView
+    app:id="@+id/rvRepos"
+    app:visibility="gone"
+    app:layout_marginTop="4dp"
+    app:layout_marginBottom="4dp"
+    app:layout_width="match_parent"
+    app:layout_height="wrap_content" />
+<LinearLayout
+    app:gravity="center"
+    app:orientation="vertical"
+    app:id="@+id/noResult"
+    app:visibility="visible"
+    app:layout_width="match_parent"
+    app:layout_height="match_parent">
+    <ImageView
+        app:layout_width="wrap_content"
+        app:layout_height="wrap_content"
+        app:src="@drawable/file" />
+    <TextView app:textSize="18sp"
+        app:textStyle="bold"
+        app:layout_width="wrap_content"
+        app:layout_height="wrap_content"
+        app:text="No result" />
+</LinearLayout>
+<android.support.design.widget.FloatingActionButton
+    app:id="@+id/filter_fab"
+    app:layout_width="wrap_content"
+    app:layout_height="wrap_content"
+    app:layout_marginRight="15dp"
+    app:layout_marginBottom="28dp"
+    app:src="@drawable/ic_action_filter"
+    app:layout_alignParentRight="true"
+    app:layout_alignParentBottom="true"
+    app:elevation="0dp"
+    />
+</RelativeLayout>

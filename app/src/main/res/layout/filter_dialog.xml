@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/dialog_header"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="32dp"
+            android:background="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="5.0">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dialog_title"
+                android:layout_weight="1.0"
+                android:textColor="#fff"
+                style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title" />
+        </LinearLayout>
+        <ImageButton
+            android:id="@+id/btn_close"
+            android:background="@android:color/transparent"
+            android:padding="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            app:srcCompat="@drawable/ic_close_24dp"
+            tools:ignore="VectorDrawableCompat" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/divider"
+        android:background="@color/colorGrey"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/dialog_header" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="#e0e0e0"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/divider">
+        <TextView
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/material_light_primary_text"
+            android:id="@+id/filter_header1"
+            android:paddingLeft="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Sort By"
+            android:layout_below="@+id/dialog_header" />
+        <LinearLayout
+            android:id="@+id/payment_filter_layout"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="3.0"
+            android:layout_below="@+id/filter_header1">
+            <RadioGroup
+                android:orientation="horizontal"
+                android:id="@+id/rgSortby"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RadioButton
+                    android:gravity="center"
+                    android:id="@+id/rb_stars"
+                    android:background="@drawable/radio_button"
+                    android:padding="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="5dp"
+                    android:checked="false"
+                    android:button="@android:color/transparent"
+                    android:text="Stars"
+                    android:layout_weight="1.0" />
+                <RadioButton
+                    android:gravity="center"
+                    android:id="@+id/rb_forks"
+                    android:background="@drawable/radio_button"
+                    android:padding="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="5dp"
+                    android:checked="false"
+                    android:button="@android:color/transparent"
+                    android:text="Forks"
+                    android:layout_weight="1.0" />
+                <RadioButton
+                    android:gravity="center"
+                    android:id="@+id/rb_watchers"
+                    android:background="@drawable/radio_button"
+                    android:padding="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="5dp"
+                    android:checked="false"
+                    android:button="@android:color/transparent"
+                    android:text="Watchers"
+                    android:layout_weight="1.0" />
+            </RadioGroup>
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/material_light_primary_text"
+                android:id="@+id/filter_headerOrderby"
+                android:paddingLeft="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Order By"
+                android:layout_below="@+id/dialog_header" />
+            <RadioGroup
+                android:orientation="horizontal"
+                android:id="@+id/rgOrderBy"
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RadioButton
+                    android:gravity="center"
+                    android:id="@+id/rb_desc"
+                    android:background="@drawable/radio_button"
+                    android:padding="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:button="@android:color/transparent"
+                    android:text="Asc"
+                    android:layout_weight="1.0" />
+                <RadioButton
+                    android:gravity="center"
+                    android:id="@+id/rb_asc"
+                    android:background="@drawable/radio_button"
+                    android:padding="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:checked="false"
+                    android:button="@android:color/transparent"
+                    android:text="Desc"
+                    android:layout_weight="1.0" />
+            </RadioGroup>
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/store_filter_layout"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textSize="18sp"
+                android:id="@+id/filter_header3"
+                android:paddingLeft="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="@string/dialog_title"
+                android:layout_below="@+id/dialog_header" />
+        </LinearLayout>
+    </LinearLayout>
+    <ImageButton
+        android:id="@+id/imgbtn_apply"
+        android:background="@drawable/states_fab_button"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:tint="@android:color/transparent"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/done" />
+</RelativeLayout>
